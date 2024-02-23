@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- style file -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Normalization -->
+    <link rel="stylesheet" href="./Normal.css" />
+    <title>Luck game(Reach to 100 point)</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container hidden">
+        <div class="left-side active-player" id="pl-0">
+          <p>PLAYER 1</p>
+          <p class="score" id="score-0">0</p>
+          <div class="current-box">
+            <span>CURRENT</span>
+            <span class="current-value" id="current-0">0</span>
+          </div>
+        </div>
+        <div class="right-side" id="pl-1">
+          <p>PLAYER 2</p>
+          <p class="score" id="score-1">0</p>
+          <div class="current-box">
+            <span>CURRENT</span>
+            <span class="current-value" id="current-1">0</span>
+          </div>
+          <button class="help">Instructions</button>
+          <button class="return">🔙Return</button>
+          <button class="new-game">🔄NEW GAME</button>
+          <button class="roll-dice">🎰ROLL DICE</button>
+          <button class="hold">📥HOLD</button>
+          <p class="result hidden">0</p>
+        </div>
+      </div>
+      <div class="level-page">
+        <p>Lucky Game (Reach to 100 points)</p>
+        <button class="friend">🧑.Vs friend</button>
+        <button class="computer">💻.Vs computer</button>
+      </div>
+      <div class="overlay hidden">
+        <div class="content">
+          <button class="back">➡</button>
+          <p>Choose mode to play (Vs computer or Vs Friend)</p>
+          <p class="bold">**** Vs computer ****</p>
+          <p>to play against Computer</p>
+          <p>you are player1 , Comp. is player2</p>
+          <p class="bold">**** Vs Friend ****</p>
+          <p>to play against your Friend</p>
+          <p>you are player1 , your Friend is player2 or vice versa</p>
+          <p class="bold">🎰ROLL Dice button :</p>
+          <p>
+            to produces a number from 1 to 6 , if number equal 1 the game turns
+            to other player , if number not equal 1 number added to current
+            score
+          </p>
+          <p class="bold">📥HOLD :</p>
+          <p>
+            to add current score to your score and switch game to other player
+          </p>
+          <p>the Fastest person reach to 100 points wins the round</p>
+          <p class="bold">🔄NEW Game :</p>
+          <p>to repeat the game again</p>
+          <p class="bold">🔙Return :</p>
+          <p>to return to choose mode to play page</p>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

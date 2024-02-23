@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* general rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+span {
+  display: block;
+  margin: 10px 0px;
+}
+button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255, 0.6);
+}
+.hidden {
+  display: none !important;
+}
+.active-player {
+  background-color: rgb(255, 255, 255, 0.4) !important;
+}
+.player-win {
+  background-color: black !important;
+}
+.bold {
+  font-weight: bold;
+}
+@keyframes button-animation {
+  0% {
+    margin-top: 5px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+.btn-animation {
+  animation: button-animation 0.3s linear;
+}
+/* main Page */
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+}
+/* level page */
+.level-page {
+  text-align: center;
+  color: white;
+}
+.level-page button {
+  display: block;
+  margin: 10px auto;
+}
+.level-page,
+.container,
+.overlay .content {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end level page */
+.container {
+  display: flex;
+  border-radius: 10px;
+}
+.container .left-side,
+.container .right-side {
+  transition: all 0.7s;
+  background-color: rgb(255, 255, 255, 0.2);
+  text-align: center;
+  width: 50%;
+  border-radius: 10px;
+}
+.container .left-side > p:first-child,
+.container .right-side > p:first-child {
+  font-weight: bold;
+  padding: 5px;
+  margin: 50px auto 20px;
+}
+.score {
+  font-weight: bold;
+  color: #c7365f;
+  padding: 5px;
+  margin: 20px auto 200px;
+}
+.current-box {
+  background-color: #c7365f;
+  padding: 10px;
+  width: 120px;
+  color: white;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+.new-game,
+.roll-dice,
+.hold,
+.result,
+.return,
+.help {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.help {
+  top: -10%;
+}
+.new-game {
+  top: 3%;
+}
+.roll-dice {
+  top: 50%;
+}
+.hold {
+  top: 60%;
+}
+.return {
+  top: 20%;
+}
+.result {
+  padding: 10px 20px;
+  color: #c7365f;
+  background-color: white;
+  top: 30%;
+}
+/* help page */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.overlay .content {
+  border-radius: 10px;
+  background-color: white;
+  text-align: right;
+  padding: 5px;
+}
+.overlay .content p {
+  text-align: left;
+  margin-bottom: 5px;
+}
+/* media query */
+@media (min-width: 768px) {
+  .new-game {
+    top: 10%;
+  }
+  .return,
+  .new-game,
+  .roll-dice,
+  .help,
+  .hold {
+    font-size: 18px;
+  }
+  .roll-dice {
+    top: 70%;
+  }
+  .hold {
+    top: 80%;
+  }
+  .result {
+    top: 40%;
+    font-size: 20px;
+  }
+  .score {
+    font-size: 20px;
+  }
+  .level-page {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 60%;
+  }
+  .result,
+  .score,
+  .right-side > p:first-child,
+  .left-side > p:first-child {
+    font-size: 25px;
+  }
+  .current-box {
+    font-size: 25px;
+    width: fit-content;
+  }
+}
